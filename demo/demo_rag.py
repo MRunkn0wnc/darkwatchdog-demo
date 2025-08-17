@@ -47,7 +47,7 @@ def main():
     while True:
         query = input("\nEnter a query (or type 'exit' to quit): ").strip()
         if query.lower() in {"exit", "quit"}:
-            print("Exiting DarkWatchdog demo. Goodbye!")
+            print("Exiting DarkWatchdog. Goodbye!")
             break
 
         pred = classifier.predict(query)
