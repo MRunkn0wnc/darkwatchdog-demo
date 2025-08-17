@@ -29,7 +29,7 @@ corpus = [
 
 class Retriever:
     def __init__(self, docs):
-        self.model = SentenceTransformer("all-MiniLM-L6-v2")
+        self.model = SentenceTransformer("all-MiniLM-L6-v2",device="cpu")
         self.docs = docs
         self.embeddings = self.model.encode(docs, convert_to_numpy=True)
         self.index = faiss.IndexFlatL2(self.embeddings.shape[1])
