@@ -19,31 +19,32 @@ Non-leak queries show simple classification
 ###Setup
 
 Clone the repo:
-'''bash
+```bash
 git clone https://github.com/MRunkn0wnc/darkwatchdog-demo.git
 cd darkwatchdog-demo
+```
 
-Create a virtual environment:
-'''bash
+##Create a virtual environment:
+```bash
 python3 -m venv venv
 source venv/bin/activate
-
-Install dependencies:
-'''bash
+```
+##Install dependencies:
+```bash
 pip install -r requirements.txt
-
+```
 Run Demo
 
 Option 1 – Direct:
-'''bash
+```bash
 python -m demo.demo_rag
-
+```
 Option 2 – Using helper script:
-'''bash
+```bash
 ./setup.sh # creates venv and installs dependencies
 ./run_demo.sh # runs the demo
-
-Example Run
+```
+###########=============Example Run==========###########
 
 === DarkWatchdog Demo (BERT + RAG) ===
 Enter a query (or type 'exit' to quit): leaked paypal credentials
@@ -62,7 +63,7 @@ Enter a query (or type 'exit' to quit): linux tutorials
 
 Query classified as NON-LEAK (score=0.985).
 
-Project Structure
+#############===============Project Structure==============#################
 
 darkwatchdog-demo/
 ├── demo/
@@ -76,7 +77,7 @@ darkwatchdog-demo/
 ├── run_demo.sh # run demo with venv
 └── README.md
 
-Disclaimer
+Disclaimer--------------------------------------------------------------------
 
 This project uses synthetic dark web–style data for demonstration purposes.
 It does not connect to or scrape any real dark web sources.
