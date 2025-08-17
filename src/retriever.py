@@ -14,7 +14,7 @@ class Retriever:
         documents: list of strings
         """
         self.corpus = documents
-        embeddings = self.model.encode(documents, convert_to_numpy=True, show_progress_bar=True)
+        embeddings = self.model.encode(documents, convert_to_numpy=True, show_progress_bar=False)
         dim = embeddings.shape[1]
         self.index = faiss.IndexFlatL2(dim)
         self.index.add(embeddings)
@@ -28,9 +28,8 @@ class Retriever:
         results = [(self.corpus[i], float(distances[0][j])) for j, i in enumerate(indices[0])]
         return results
 
-# quick test
 if __name__ == "__main__":
-    docs = ["Leaked DB dump from forum", "Normal chit chat", "Ransomware sample link"]
-    retriever = Retriever()
-    retriever.build_index(docs)
-    print(retriever.query("database leak"))
+    docs = ["Leaked DB dump", "Normal chat", "Ransomware sample link"]
+    r = Retriever()
+    r.build_index(docs)
+    print(r.query("database leak"))
