@@ -20,7 +20,7 @@ cd darkwatchdog-demo
 2. CPU-Only Environment Setup
 For non-GPU machines, run the setup script:
 ```bash
-./setup.sh
+sudo ./setup.sh
 ```
 This will remove any old virtual environment, create a new venv, install CPU-only packages (torch, sentence-transformers, faiss-cpu, transformers) and optional packages scikit-learn and pandas for training scripts.
 3.Activate the environment:
