@@ -26,6 +26,5 @@ jobs:
         pip install transformers sentence-transformers faiss-cpu
         pip install scikit-learn pandas
 
-    - name: Run DarkWatchdog Demo (Test)
-      run: |
-        python -m demo.demo_rag
+    - name: Run DarkWatchdog Demo (Non-Interactive Test)
+      run: echo "password leak" | python -m demo.demo_rag
