@@ -8,7 +8,7 @@ Small demo for a DarkWatchdog-style pipeline: rule-based classification + RAG-st
 
 ```bash
 # clone after you push, or run locally pre-push
-git clone <your-repo-url>
+git clone https://github.com/MRunkn0wnc/darkwatchdog-demo.git
 cd darkwatchdog-demo
 
 # setup
